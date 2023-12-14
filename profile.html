@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Details</title>
+
+    <link rel="stylesheet" href="assets/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <script src="assets/jQuery.js"></script>
+    <script defer src="js/profile.js"></script>
+</head>
+<body>
+    <div class="container center">
+
+        <div class="card mb-4">
+            <div class="card-header">Account Details</div>
+            <div class="card-body">
+                <form id="profileForm">
+                    <div class="mb-3">
+                        <label class="small mb-1" for="inputUsername">Username</label>
+                        <input class="form-control" id="inputUsername" name="userName" type="text" placeholder="Enter your username">
+                    </div>
+                    <div class="row gx-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputFirstName">First name</label>
+                            <input class="form-control" id="inputFirstName" name="firstName" type="text" placeholder="Enter your first name">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputLastName">Last name</label>
+                            <input class="form-control" id="inputLastName" name="lastName" type="text" placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    <div class="row gx-3 mb-3">
+                        <div class="col-md-6">
+                        <label class="small mb-1" for="inputOrgName">Organization name</label>
+                        <input class="form-control" id="inputOrgName" name="orgName" type="text" placeholder="Enter your organization name">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="inputLocation">Location</label>
+                        <input class="form-control" id="inputLocation" name="location" type="text" placeholder="Enter your location">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="small mb-1" for="inputEmailAddress">Email address</label>
+                    <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="Enter your email address" readonly >
+                </div>
+                <div class="row gx-3 mb-3">
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="inputPhone">Phone number</label>
+                        <input class="form-control" id="inputPhone" name="phone" type="tel" placeholder="Enter your phone number">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="small mb-1" for="inputBirthday">Birthday</label>
+                        <input class="form-control" id="inputBirthday" name="birth" type="date" name="birthday" placeholder="Enter your birthday">
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="button" onclick="updateDB(this.form)">Save changes</button>
+                <button class="btn btn-warning" type="button" onclick="logOut()">Log Out</button>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

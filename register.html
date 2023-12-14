@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="assets/bootstrap.css">
+
+    <script src="js/register.js"></script>
+    <script src="assets/jQuery.js"></script>
+</head>
+<body>
+    <div class="container center form-container">
+        <form class="needs-validation" novalidate>
+            <div class="mb-3 text-center">REGISTER</div>
+            <div class="form-floating mb-3" id="mail">
+                <input name="email" type="email" class="form-control" id="emailBox" placeholder="Butcher@Blaviken" required>
+                <label>Email address</label>
+                <div class="invalid-feedback" id="emailInvalid"></div>
+            </div>
+            <div class="form-floating mb-3" id="pass">
+                <input type="password" class="form-control" id="passwordBox" placeholder="Password" name="password" required>
+                <label>Password</label>
+                <div class="invalid-feedback" id="passInvalid"></div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="process(this.form)">Register</button>
+        </form>
+    </div>
+</body>
+</html>
